@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="9339" started-at="2016-07-08T06:37:18Z" finished-at="2016-07-08T06:37:27Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="9339" started-at="2016-07-08T06:37:18Z" finished-at="2016-07-08T06:37:27Z">
+      <class name="niteco.com.auto.mydemo.POMwithPage">
+        <test-method status="PASS" signature="setBase()[pri:0, instance:niteco.com.auto.mydemo.POMwithPage@4b43cc20]" name="setBase" is-config="true" duration-ms="5826" started-at="2016-07-08T13:37:18Z" finished-at="2016-07-08T13:37:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBase -->
+        <test-method status="PASS" signature="verifyLoginSuccess()[pri:0, instance:niteco.com.auto.mydemo.POMwithPage@4b43cc20]" name="verifyLoginSuccess" duration-ms="2193" started-at="2016-07-08T13:37:24Z" finished-at="2016-07-08T13:37:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginSuccess -->
+        <test-method status="PASS" signature="close()[pri:0, instance:niteco.com.auto.mydemo.POMwithPage@4b43cc20]" name="close" is-config="true" duration-ms="1311" started-at="2016-07-08T13:37:26Z" finished-at="2016-07-08T13:37:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- niteco.com.auto.mydemo.POMwithPage -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

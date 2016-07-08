@@ -12,6 +12,11 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.plugin.version>3.3</maven.compiler.plugin.version>
+      <selenium.version>2.53.0</selenium.version>
+      <testng.version>6.9.10</testng.version>
+      <skipTests>false</skipTests>
+      <testngFile>testng.xml</testngFile>
   </properties>
 
   <dependencies>
@@ -19,7 +24,7 @@
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
       <version>6.9.9</version>
-      <scope>test</scope>
+      <!-- <scope>test</scope> -->
     </dependency>
      <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
@@ -42,4 +47,44 @@
         <version>1.9.2</version>
     </dependency>
   </dependencies>
-</project>
+  <build>
+      <resources>
+         <resource>
+            <directory>src/main/java</directory>
+            <filtering>false</filtering>
+         </resource>
+         <resource>
+            <directory>src/test/java</directory>
+            <filtering>false</filtering>
+         </resource>
+         <resource>
+            <directory>src/main/resources</directory>
+            <excludes>
+               <exclude>**/*</exclude>
+            </excludes>
+         </resource>
+      </resources>
+      <plugins>
+         <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>${maven.compiler.plugin.version}</version>
+            <configuration>
+               <source>1.7</source>
+               <target>1.7</target>
+            </configuration>
+         </plugin>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.16</version>
+            <configuration>
+               <suiteXmlFiles>
+                  <suiteXmlFile>${basedir}/${testngFile}</suiteXmlFile>
+               </suiteXmlFiles>
+               <skipTests>${skipTests}</skipTests>
+               <testFailureIgnore>true</testFailureIgnore>
+            </configuration>
+         </plugin>
+      </plugins>
+   </build>
+   </project>

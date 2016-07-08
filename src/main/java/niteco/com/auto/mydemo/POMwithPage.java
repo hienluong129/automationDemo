@@ -37,6 +37,6 @@ public class POMwithPage {
 	@AfterTest
 	public void close(){
 		driver.close();
-		System.exit(0);
+		
 	}
 }
